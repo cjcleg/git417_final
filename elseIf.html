@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Else If Statements</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css" />
+	<meta charset="utf-8" />
+	<script src="modernizr.custom.05819.js"></script>
+	 <!-- get the highlight js code library from a CDN-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.5/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.5/languages/javascript.min.js"></script>
+    <!-- In order to add html code examples this line needs to be in the head tag -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.5/languages/xml.min.js"></script>
+    <!-- This line is needed for the default CSS style -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.5/styles/default.min.css">
+</head>
+
+<body>
+	<nav>
+		<div class="navMenu">
+		  <a href="index.html">INTRODUCTION</a>
+		  <a href="if.html">IF STATEMENTS</a>
+		  <a href="ifElse.html">IF/ELSE STATEMENTS</a>
+		  <a href="nested.html">NESTED STATEMENTS</a>
+		  <a class= "active" href="elseIf.html">ELSE IF STATEMENTS</a>
+		  <a href="switch.html">SWITCH STATEMENTS</a>
+		</div>
+	</nav>
+	
+
+	<div class="main">
+ 		<h1>ELSE IF STATEMENTS</h1>
+ 		<p>
+ 			An else if statement is a compact version of a nested if/else statement. It combines an else statement with it's nested if statement which requires fewer characters and lines of code, and is easier to read. The syntax should look familiar by now: </p>
+		<!--code snippet to show if statement syntax--> 
+		<pre>
+		<code class="javascript">
+
+			else if (expression) {
+				statements;
+			}
+
+		</code>
+		</pre>
+
+		
+		<p>This is really the exact same as saying: </p>
+
+		<pre>
+		<code class="javascript">
+
+			else {
+				if (expression) {
+					statements;
+				}	
+			} 
+
+		</code>
+		</pre>
+		<!--explanation of syntax keywords and definitions-->
+		<p>however, our else if construction takes up 3 lines, while the nested if statement takes up 5. For our else if example, let's look at one of the most common and useful applications of this topic: creating backwards compatible event listeners. </p>
+
+		<!--code snippet with example-->
+		<pre>
+		<code class="javascript">
+			var submitButton = document.getElementById("button");
+			//if addeventlistener method exists for the button, the method is executed 
+			if (submitButton.addEventListener) {  
+				submitButton.addEventListener("click", submitForm,  
+					false);
+			}
+			//if addeventlistener does not exist it checks for attachevent method. 
+			//if that exists it runs, if not it does nothing. 
+			else if (submitButton.attachEvent) {
+				submitButton.attachEvent("onclick", submitForm);
+			}
+		</code>
+		</pre>
+		<!--explanation of example code-->
+		<p>
+			This example begins by creating a variable named submitButton and using the getElementById() method to assign it the value of the element in the document with the ID "button." Then we go into our if statement, which checks to see if the addEventListener method exists for the button, and if that condition evaluates as true, or if the method does exist, the command block will fun using the addEventListener method. If the method does not exist, or the condition evaluates as false, the program moves on to the else if statement, which then checks to see if the attachEvent method is present for the button. If that conditional statement evaluates as true, the command block will run using the attachEvent method. If it does not exist, the program will return nothing. This example specifically is one that will come in extremely handy when creating usable and fucntional webpages. Click "Next" to continue!
+		</p>
+		<a class= "back" href="nested.html">BACK</a>
+ 		<a class= "next" href="switch.html">NEXT</a>
+ 	</div>
+ 	<script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>

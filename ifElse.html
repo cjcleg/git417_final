@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>If/Else Statements</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css" />
+	<meta charset="utf-8" />
+	<script src="modernizr.custom.05819.js"></script>
+	 <!-- get the highlight js code library from a CDN-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.5/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.5/languages/javascript.min.js"></script>
+    <!-- In order to add html code examples this line needs to be in the head tag -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.5/languages/xml.min.js"></script>
+    <!-- This line is needed for the default CSS style -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.5/styles/default.min.css">
+</head>
+
+<body>
+	<nav>
+		<div class="navMenu">
+		  <a href="index.html">INTRODUCTION</a>
+		  <a href="if.html">IF STATEMENTS</a>
+		  <a class= "active" href="ifElse.html">IF/ELSE STATEMENTS</a>
+		  <a href="nested.html">NESTED STATEMENTS</a>
+		  <a href="elseIf.html">ELSE IF STATEMENTS</a>
+		  <a href="switch.html">SWITCH STATEMENTS</a>
+		</div>
+	</nav>
+	
+
+	<div class="main">
+ 		<h1>IF/ELSE STATEMENTS</h1>
+ 		<p>
+ 			Following the "If Statement", naturally, is the "If/Else Statement." The syntax for this is quite similar to an if statement with one additional keyword to define:
+		</p>
+		<!--code snippet to show if statement syntax--> 
+		<pre>
+		<code class="javascript">
+			if (expression) {
+				statements; 
+			}
+			else {
+				statements;
+			}
+		</code>
+		</pre>
+
+		<!--explanation of syntax keywords and definitions-->
+		<p>An if/else statement begins with the previous "if statement" syntax we saw on the last page; however, rather than returning nothing if the conditional statement evaluates to a falsy value, the if/else statement includes a second command block which will run in this scenario. This is the "else statement" and begins, obviously, with the keyword "else." Lets revisit our last example: </p>
+		<!--code snippet with example-->
+		<pre>
+		<code class="javascript">
+			var hour = new Date().getHours(); 
+  			var message;
+  			if (hour < 12) {
+  				message = "Good morning!";
+  			}
+  			else {
+  				message = "Good afternoon!";
+  			}
+		</code>
+		</pre>
+		<!--explanation of example code-->
+		<p>
+			This example is essentially the same as the one on the last page with a very minor ammendment. After running through the first "if statement", we have an "else statement" with a different command block which defines the variable message as the string "Good afternoon!" In the event that the conditional statement evaluates as falsy, or, plainly, in the case that it is later than 12, the message which, again, is displayed somewhere else within the document, will display the words "Good afternoon!" Click "Next" to continue!
+		</p>
+		<a class= "back" href="if.html">BACK</a>
+ 		<a class= "next" href="nested.html">NEXT</a>
+ 	</div>
+ 	<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Nested Conditional Statements</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css" />
+	<meta charset="utf-8" />
+	<script src="modernizr.custom.05819.js"></script>
+	 <!-- get the highlight js code library from a CDN-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.5/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.5/languages/javascript.min.js"></script>
+    <!-- In order to add html code examples this line needs to be in the head tag -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.5/languages/xml.min.js"></script>
+    <!-- This line is needed for the default CSS style -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.5/styles/default.min.css">
+</head>
+
+<body>
+	<nav>
+		<div class="navMenu">
+		  <a href="index.html">INTRODUCTION</a>
+		  <a href="if.html">IF STATEMENTS</a>
+		  <a href="ifElse.html">IF/ELSE STATEMENTS</a>
+		  <a class= "active" href="nested.html">NESTED STATEMENTS</a>
+		  <a href="elseIf.html">ELSE IF STATEMENTS</a>
+		  <a href="switch.html">SWITCH STATEMENTS</a>
+		</div>
+	</nav>
+	
+
+	<div class="main">
+ 		<h1>NESTED CONDITIONAL STATEMENTS</h1>
+ 		<p>
+ 			If you've ever studied logic or computer science, you may be familiar with nested statements. If not, you will be shortly. This tutorial specifically will focus on nested if and if/else statements, which are made simply by putting an if statement or if/else statement inside of another if or if/else statement to test for further conditions and create more specific conditional results. 
+			Putting an if statement inside an if or if/else statement is called a nested if statement, while putting a if/else statement inside an if or if/else statement is called a nested if/else statement. Let's look at the syntax for a nested statement:</p>
+		<!--code snippet to show if statement syntax--> 
+		<pre>
+		<code class="javascript">
+			if (expression) {
+				statements; 
+			}
+			else {
+				if (expression) {
+					statements; 
+				}
+				else {
+					statements;
+				}
+			}
+		</code>
+		</pre>
+
+		<!--explanation of syntax keywords and definitions-->
+		<p>The syntax for this relatively simple nested statement is exactly the same as our previous examples; the only difference is we now have the oppurtunity for 3 different outcomes instead of just two. Let's revisit our example: </p>
+		<!--code snippet with example-->
+		<pre>
+		<code class="javascript">
+			var hour = new Date().getHours(); 
+  			var message;
+  			if (hour < 12) {
+  				message = "Good morning!";
+  			}
+  			else {
+  				if (hour < 16) {
+					message = "Good afternoon!";
+  				} 
+  				else {
+  					message = "Good evening!";
+  				}
+  				
+  			}
+		</code>
+		</pre>
+		<!--explanation of example code-->
+		<p>
+			This example is very similar to our previous statement; however we've added a conditional block to further elaborate the message given for the second half of the day. Within our original if statement, we've added a nested if/else statement. This program first checks to see if the hour is less than 12; if that returns true, the message variable is assigned "Good morning!" If it returns false, our program will then move to the nested if statement and check to see if the hour is less than 16 (earlier than 4 p.m.) If this returns true, message will be assigned "Good afternoon!" If it returns false, this means the hour is greater than 16, or it is later than 4, and the program will run the command block of the nested else statement, which assigns message the string: "Good evening!" Again, this is not a very complex example, but nested statements open up a world of oppurtunity when it comes to decision making structures! Click "Next" to continue!
+		</p>
+		<a class= "back" href="ifElse.html">BACK</a>
+ 		<a class= "next" href="elseIf.html">NEXT</a>
+ 	</div>
+ 	<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

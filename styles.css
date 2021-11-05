@@ -1,0 +1,81 @@
+/*global body text styles*/ 
+
+body {
+  /*font-family: Arial, Helvetica, sans-serif;*/ 
+  font-family: Futura, Arial, sans-serif;
+}
+
+/*styling for navigation bar*/ 
+
+.navMenu {
+  height: 100%;
+  width: 225px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: black;
+  padding-top: 20px;
+}
+
+/*styling for menu links*/
+.navMenu a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+/*color styles for hover and active class on the nav bar*/ 
+
+.navMenu .active{
+  color:#f1f1f1;
+}
+
+.navMenu a:hover {
+  color: #ffff00;
+}
+
+.main {
+  margin-left: 225px; /* Same as the width of the menu bar */
+  font-size: 24px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+/*styling to add space from bottom of page in main div*/ 
+.main {
+  padding-bottom: 50px;
+}
+/*styling for back and next links*/ 
+
+.back {
+  text-decoration: none;
+  background-color: black;
+  color: #ffff00;
+  padding: 6px 9px 6px 8px;
+  position:fixed;
+  bottom:30px;
+  left:255px;
+}
+.next{
+  text-decoration: none; 
+  background-color: black;
+  color: #ffff00;
+  padding: 6px 9px 6px 8px;
+  position:fixed;
+  bottom:30px;
+  right:30px;
+}
+
+code{
+  margin-left: -200px;
+  font-size: 18px;
+}
+
+/*responsive designs for smaller screens*/
+@media screen and (max-height: 450px) {
+  .navMenu {padding-top: 15px;}
+  .navMenu a {font-size: 18px;}
+  .main a {font-size: 18px;}
+  .main p {font-size: 18px;}
+  .main h1 {font-size: 32px;}
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>If Statements</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css" />
+	<meta charset="utf-8" />
+	<script src="modernizr.custom.05819.js"></script>
+	 <!-- get the highlight js code library from a CDN-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.5/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.5/languages/javascript.min.js"></script>
+    <!-- In order to add html code examples this line needs to be in the head tag -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.5/languages/xml.min.js"></script>
+    <!-- This line is needed for the default CSS style -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.5/styles/default.min.css">
+</head>
+
+<body>
+	<nav>
+		<div class="navMenu">
+		  <a href="index.html">INTRODUCTION</a>
+		  <a class= "active" href="if.html">IF STATEMENTS</a>
+		  <a href="ifElse.html">IF/ELSE STATEMENTS</a>
+		  <a href="nested.html">NESTED STATEMENTS</a>
+		  <a href="elseIf.html">ELSE IF STATEMENTS</a>
+		  <a href="switch.html">SWITCH STATEMENTS</a>
+		</div>
+	</nav>
+	
+
+	<div class="main">
+ 		<h1>IF STATEMENTS</h1>
+ 		<p>
+ 			One of the simplest and most common JS conditional statements is the "If Statement". 
+ 			The syntax is rather simple:
+		</p>
+		<!--code snippet to show if statement syntax--> 
+		<pre>
+		<code class="javascript">
+			if (expression) {
+				statements; 
+			}
+		</code>
+		</pre>
+
+		<!--explanation of syntax keywords and definitions-->
+		<p>The first important part of an if statement is the keyword "if" which must begin the statement. The "expression" within this syntax example represents the conditional statement which is evaluated for a truthy or falsy value. The "statements" represents the code to be executed if the conditional statement returns a truthy value. If there is more than one line of code to be run we call this a "command block." Lets look at an example: </p>
+		<!--code snippet with example-->
+		<pre>
+		<code class="javascript">
+			var hour = new Date().getHours(); 
+  			var message;
+  			if (hour < 12) {
+  				message = "Good morning!";
+  			}
+		</code>
+		</pre>
+		<!--explanation of example code-->
+		<p>
+			This if statement first creates a variable with the name "hour" and uses the getHours() method to obtain the time of day and assign it as the definition of the variable. Next, a new variable named message is declared but is not defined. The definition of this variable will depend upon the results of the conditional statement.
+		</p> 
+		<p>
+			The if statement begins with the keyword "if" followed by the conditional statement: "(hour < 12)"; this is the conditional statement that is evaluated. If this statement evaluates as true, or more plainly, if it is earlier than noon, the variable message will be assigned the value of the string "good morning!", which is likely to be displayed somewhere else in the document. This is likely one of the most simple forms of conditional statements, but it sets the stage for us to continue learning some more complex conepts! Click "Next" to continue!
+		</p>
+
+		<a class= "back" href="index.html">BACK</a>
+ 		<a class= "next" href="ifElse.html">NEXT</a>
+ 	</div>
+ 	<script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>

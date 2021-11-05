@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Switch Statements</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css" />
+	<meta charset="utf-8" />
+	<script src="modernizr.custom.05819.js"></script>
+	 <!-- get the highlight js code library from a CDN-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.5/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.5/languages/javascript.min.js"></script>
+    <!-- In order to add html code examples this line needs to be in the head tag -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.5/languages/xml.min.js"></script>
+    <!-- This line is needed for the default CSS style -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.5/styles/default.min.css">
+</head>
+
+<body>
+	<nav>
+		<div class="navMenu">
+		  <a href="index.html">INTRODUCTION</a>
+		  <a href="if.html">IF STATEMENTS</a>
+		  <a href="ifElse.html">IF/ELSE STATEMENTS</a>
+		  <a href="nested.html">NESTED STATEMENTS</a>
+		  <a href="elseIf.html">ELSE IF STATEMENTS</a>
+		  <a class= "active"href="switch.html">SWITCH STATEMENTS</a>
+		</div>
+	</nav>
+	
+
+	<div class="main">
+ 		<h1>SWITCH STATEMENTS</h1>
+ 		<p>
+ 			A switch statement is unique from every previous statement we've learned so far, with a completely new syntax:
+ 		</p>
+		<!--code snippet to show if statement syntax--> 
+		<pre>
+		<code class="javascript">
+			switch (expression){
+				case label: 
+					statements; 
+					break;
+				case label: 
+					statements; 
+					break; 
+				...
+				default:
+					statements; 
+					break;
+				}
+
+		</code>
+		</pre>
+		<!--explanation of syntax keywords and definitions-->
+		<p>
+			The switch statement begins with the keyword "switch." It functions by comparing the value of an expression to a value contained within a special statement called a case label. A case label in a switch statement represents a specific value; in our syntax example, you see that each case label is followed by one or more statements that are executed if the value of the case label matches the value of the switch statement's expression. The break statement is important in a switch statement, because unlike an if, if else, or else if statement, a switch statement will run through every case label by default unless the break statement is present to end the statment. A switch statement is great for situations when you're working with many different conditions and outcomes. Let's look at an example: 
+		</p>
+
+		<!--code snippet with example-->
+		<pre>
+		<code class="javascript">
+			var day;
+			switch (new Date().getDay()) {
+				case 0:
+				    day = "Sunday";
+				    break;
+	  			case 1:
+				    day = "Monday";
+				    break;
+				case 2:
+				    day = "Tuesday";
+				    break;
+				case 3:
+				    day = "Wednesday";
+				    break;
+				case 4:
+				    day = "Thursday";
+				    break;
+				case 5:
+				    day = "Friday";
+				    break;
+				case 6:
+				    day = "Saturday";
+				}
+
+			document.getElementById("message").innerHTML = "It's" + day ;
+		</code>
+		</pre>
+		<!--explanation of example code-->
+		<p>
+			This is a relatively simple example of a switch statement which displays the day of the week. First, the variable day is declared. Then, we enter our switch statement. The conditional statement uses the getDay() method, which uses the javascript date object to return the day of the week as a number 0-6. We then begin working through our case labels. The first case evaluates the expression with the label "0" which equates to Sunday. If the values match, the statement within the case 0 block is run, meaning the variable day is assigned the string value "Sunday," and the program breaks from the statement. If the values do not match, the code will continue to check each case label with the statement until it either finds a value or the statement ends. Some switch statements include default statements, as a premeditative attempt to mitigate runtime errors, bugs, and other code issues. 
+		</p>
+		<p>This has been a short, but hopefully informational introduction to conditional statements and decision making structures in the Javascript language! If you would like to revisit any topics, simply click the link in the nav bar, or click home to go back to the beginning! Good luck on your javascript journeys!</p>
+		<a class= "back" href="elseIf.html">BACK</a>
+ 		<a class= "next" href="index.html">HOME</a>
+ 	</div>
+ 	<script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>
